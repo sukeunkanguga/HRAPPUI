@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hrapp", "hrapp\hrapp.csproj", "{3B4C672D-2D5F-4E4A-8480-EF3B8CED9165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees", "Employees\Employees.csproj", "{0179D33F-0719-44C3-94D7-D9F18DF4A1BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B4C672D-2D5F-4E4A-8480-EF3B8CED9165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4C672D-2D5F-4E4A-8480-EF3B8CED9165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4C672D-2D5F-4E4A-8480-EF3B8CED9165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4C672D-2D5F-4E4A-8480-EF3B8CED9165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0179D33F-0719-44C3-94D7-D9F18DF4A1BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0179D33F-0719-44C3-94D7-D9F18DF4A1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0179D33F-0719-44C3-94D7-D9F18DF4A1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0179D33F-0719-44C3-94D7-D9F18DF4A1BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABBBFB70-AD33-48FA-A591-B91C2C81A8D4}
+	EndGlobalSection
+EndGlobal

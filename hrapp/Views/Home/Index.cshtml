@@ -1,0 +1,353 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<header class="pageheader">
+    <h3><i class="fa fa-home"></i> @ViewData["Title"] </h3>
+    <div class="breadcrumb-wrapper">
+        <span class="label">You are here:</span>
+        <ol class="breadcrumb">
+            <li> <a href="#"> Home </a> </li>
+            <li class="active"> @ViewData["Title"] </li>
+        </ol>
+    </div>
+</header>
+
+<div id="page-content">
+    <div class="col-md-9">
+        <div class="panel dash-panel">
+            <div class="panel-body np">
+                <div class="col-md-4 col-sm-4 pad-no">
+
+                    <div class="list-unstyled mar-hor">
+                        <a asp-area="" asp-controller="Home" asp-action="News">
+                            <div class="section hr">
+                                <img src="~/img/Scroll.png" />
+                                <h2>News</h2>
+                            </div>
+                        </a>
+                        <a asp-area="" asp-controller="Home" asp-action="#">
+                            <div class="section">
+                                <img src="~/img/reports.png" />
+                                <h2>Reports</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 pad-no">
+                    <div class="vl">
+                        <div class="list-unstyled mar-hor">
+                            <a asp-area="" asp-controller="Home" asp-action="Employees">
+                                <div class="section hr">
+                                    <img src="~/img/employees.png" />
+                                    <h2>Employees</h2>
+                                </div>
+                            </a>
+                            <a asp-area="" asp-controller="Home" asp-action="#">
+                                <div class="section">
+                                    <img src="~/img/files.png" />
+                                    <h2>Files</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 pad-no">
+                    <div class="vl">
+                        <ul class="list-unstyled mar-hor">
+                            <li>
+                                <a asp-area="" asp-controller="Home" asp-action="Jobs">
+                                    <div class="section hr">
+                                        <img src="~/img/job search.png" />
+                                        <h2>Hiring</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-area="" asp-controller="Home" asp-action="Profile">
+                                    <div class="section">
+                                        <img src="~/img/profile.png" />
+                                        <h2>Profile</h2>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-success btn-icon icon-lg fa fa-plus" id="addUserBtn" data-toggle="modal" data-target="#addNew"> Add New User</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addNew" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content" id="addContent">
+                <div class="modal-header tab-modal">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add Employee</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="pl-35">
+
+                        <!--Nav Tabs-->
+                        <ul class="nav nav-tabs m-8">
+                            <li class="active">
+                                <a data-toggle="tab" href="#demo-lft-tab-1" aria-expanded="true"><strong>  Personal  </strong></a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" href="#demo-lft-tab-2" aria-expanded="false"><strong>  Family  </strong></a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" href="#demo-lft-tab-3" aria-expanded="false"><strong>  Qualification  </strong></a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" href="#demo-lft-tab-4" aria-expanded="false"><strong>  Employment  </strong></a>
+                            </li>
+                        </ul>
+
+                        <!--Tabs Content-->
+                        <div class="tab-content">
+
+                            @*Begin Personal Tab*@
+                            <div id="demo-lft-tab-1" class="tab-pane fade  active in">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Staff ID</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-sm-offset-1">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Status</label>
+                                            <Select type="text" class="form-control input-sm">
+                                                <option value="-1">Select status</option>
+                                            </Select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Title</label>
+                                            <Select type="text" class="form-control input-sm">
+                                                <option value="-1">Select title</option>
+                                            </Select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-sm-offset-1">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">First Name</label>
+                                            <input type="email" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Last Name</label>
+                                            <input type="url" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Other Names</label>
+                                            <input type="email" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Sex</label>
+                                            <Select type="text" class="form-control input-sm">
+                                                <option value="-1">Select Sex</option>
+                                            </Select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 col-sm-offset-1">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Nationality</label>
+                                            <input type="url" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Birth Date</label>
+                                            <div class="input-group date">
+                                                <input type="date" class="form-control input-sm">
+                                                <span class="input-group-addon"><i class="fa fa-calendar fa-sm"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Age</label>
+                                            <input type="url" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-sm-offset-2">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Marital Status</label>
+                                            <Select type="text" class="form-control input-sm">
+                                                <option value="-1">Choose Marital Status</option>
+                                            </Select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Phone</label>
+                                            <input type="url" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Email</label>
+                                            <input type="email" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Address</label>
+                                            <input type="url" class="form-control input-sm">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            @*End Personal Tab*@
+
+                            @*Begin Family Tab*@
+                            <div id="demo-lft-tab-2" class="tab-pane fade">
+                                <h4 class="text-thin">Second Tab Content</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                            </div>
+                            @*End Family Tab*@
+    
+                            @*Begin Qualification Tab*@
+                            <div id="demo-lft-tab-3" class="tab-pane fade">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Institution</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Begin Date</label>
+                                            <div class="input-group date">
+                                                <input type="date" class="form-control input-sm">
+                                                <span class="input-group-addon"><i class="fa fa-calendar fa-sm"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">End Date</label>
+                                            <div class="input-group date">
+                                                <input type="date" class="form-control input-sm">
+                                                <span class="input-group-addon"><i class="fa fa-calendar fa-sm"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Qualification</label>
+                                            <input type="text" class="form-control input-sm" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @*End Qualification Tab*@
+
+                            @*Begin Employment Tab*@
+                            <div id="demo-lft-tab-4" class="tab-pane fade">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">TIN</label>
+                                            <input type="url" class="form-control input-sm">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">SSNIT</label>
+                                            <input type="email" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Tier 2</label>
+                                            <input type="url" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Section</label>
+                                            <input type="url" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Unit</label>
+                                            <input type="url" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Rank / Role</label>
+                                            <input type="url" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-10">
+                                            <label class="control-label">Assumption Date</label>
+                                            <div class="input-group date">
+                                                <input type="date" class="form-control input-sm">
+                                                <span class="input-group-addon"><i class="fa fa-calendar fa-sm"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            @*End Employment Tab*@
+                        </div>
+                    </div>
+                </div>
+                @*Begin Modal Footer*@
+                <div class="modal-footer">
+                    <button type="button" id="negative" class="btn btn-default btn-sm disabled" data-dismiss="modal">Back</button>
+                    <button type="button" id="positive" class="btn btn-success btn-sm">Next</button>
+                </div>
+                @*End Modal Footer*@ 
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<!--===================================================-->
+<!-- END OF CONTAINER -->

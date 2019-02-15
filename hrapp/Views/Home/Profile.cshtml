@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Profile";
+}
+
+<header class="pageheader">
+    <h3><i class="fa fa-user"></i> @ViewData["Title"] </h3>
+    <div class="breadcrumb-wrapper">
+        <span class="label">You are here:</span>
+        <ol class="breadcrumb">
+            <li> <a href="#"> Home </a> </li>
+            <li class="active"> @ViewData["Title"] </li>
+        </ol>
+    </div>
+</header>
+<div id="page-content">
+    <div class="col-md-9">
+            <div class="panel-body np">
+
+
+                <div class="tab-base">
+
+                    <!--Nav Tabs-->
+                    <ul class="nav nav-tabs">
+                        <li class="">
+                            <a data-toggle="tab" href="#demo-lft-tab-1" aria-expanded="false"><strong>  Personal  </strong></a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#demo-lft-tab-2" aria-expanded="false"><strong>  Family  </strong></a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#demo-lft-tab-3" aria-expanded="false"><strong>  Qualification  </strong></a>
+                        </li>
+                        <li class="active">
+                            <a data-toggle="tab" href="#demo-lft-tab-4" aria-expanded="true"><strong>  Leave  </strong></a>
+                        </li>
+                    </ul>
+
+                    <!--Tabs Content-->
+                    <div class="tab-content">
+                        <div id="demo-lft-tab-1" class="tab-pane fade">
+                            <h4 class="text-thin">First Tab Content</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        </div>
+                        <div id="demo-lft-tab-2" class="tab-pane fade">
+                            <h4 class="text-thin">Second Tab Content</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        </div>
+                        <div id="demo-lft-tab-3" class="tab-pane fade">
+                            <h4 class="text-thin">Third Tab Content</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        </div>
+                        <div id="demo-lft-tab-4" class="tab-pane fade active in">
+                            <h4 class="text-thin">Fourth Tab Content</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+

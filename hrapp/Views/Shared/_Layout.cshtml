@@ -1,0 +1,610 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - hrapp</title>
+
+    <!--STYLESHEET-->
+    <!--=================================================-->
+    <!--Roboto Slab Font [ OPTIONAL ] -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,400" rel="stylesheet">
+
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--Jasmine Stylesheet [ REQUIRED ]-->
+    <link href="~/css/style.css" rel="stylesheet" />
+
+    <!--Font Awesome [ OPTIONAL ]-->
+    <link href="~/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="~/plugins/jvectormap/jquery-jvectormap.css" rel="stylesheet" />
+
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="~/plugins/switchery/switchery.min.css" rel="stylesheet" />
+
+    <!--Bootstrap Datepicker [ OPTIONAL ]-->
+    <link href="~/plugins/bootstrap-datepicker/bootstrap-datepicker.css" rel="stylesheet" />
+
+    <!--Morris.js [ OPTIONAL ]-->
+    <!--<link href="plugins/jquery-ricksaw-chart/css/rickshaw.css" rel="stylesheet">-->
+    <!--Bootstrap Select [ OPTIONAL ]-->
+    <link href="~/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+
+    <!--Bootstrap Table [ OPTIONAL ]-->
+    <link href="~/plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet" />
+
+    <!--Jquery Tag It [ OPTIONAL ]-->
+    <link href="~/plugins/tag-it/jquery.tagit.css" rel="stylesheet" />
+
+    <!--Summernote [ OPTIONAL ]-->
+    <link href="~/plugins/summernote/summernote.min.css" rel="stylesheet" />
+
+    <!--Demo [ DEMONSTRATION ]-->
+    <link href="~/css/demo/jasmine.css" rel="stylesheet" />
+
+    <!--SCRIPT-->
+    <!--=================================================-->
+    <!--Page Load Progress Bar [ OPTIONAL ]-->
+    <link href="~/plugins/pace/pace.min.css" rel="stylesheet" />
+    <script src="~/plugins/pace/pace.min.js" asp-append-version="true"></script>
+</head>
+
+<body>
+    <div id="container" class="effect mainnav-lg">
+
+        <!--NAVBAR-->
+        <!--===================================================-->
+        <header id="navbar">
+            <div id="navbar-container" class="boxed">
+
+                <!--Brand logo & name-->
+                <!--================================-->
+                <div class="navbar-header">
+                    <a class="navbar-brand" asp-id="COArms" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="~/img/images.png" alt="coat-of-arms" />
+                    </a>
+                </div>
+                <!--================================-->
+                <!--End brand logo & name-->
+                <!--Navbar Dropdown-->
+                <!--================================-->
+                <div class="navbar-content clearfix">
+                    <form class="nav navbar-top-links col-md-8 offset-md-2  offset-sm-2 col-sm-8 pull-left">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <ul class="nav navbar-top-links pull-right">
+
+                        <!--User dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li id="dropdown-user" class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                                <span class="pull-right"> <img class="img-circle img-user media-object" src="~/img/user.png" alt="Profile Picture"> </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right with-arrow">
+
+                                <!-- User dropdown menu -->
+                                <ul class="head-list">
+                                    <li>
+                                        <a href="#"> <i class="fa fa-user fa-fw fa-lg"></i> Profile </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-envelope fa-fw fa-lg"></i> Messages </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">  <i class="fa fa-gear fa-fw fa-lg"></i> Settings </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> <i class="fa fa-sign-out fa-fw"></i> Logout </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End user dropdown-->
+
+
+                    </ul>
+                </div>
+                <!--================================-->
+                <!--End Navbar Dropdown-->
+
+            </div>
+        </header>
+        <!--===================================================-->
+        <!--END NAVBAR-->
+            <section id="content-container">
+                @RenderBody()
+            </section>
+
+
+
+        <div class="boxed">
+            <!--MAIN NAVIGATION-->
+            <!--===================================================-->
+            <nav id="mainnav-container">
+                <div id="mainnav">
+
+                    <!--Menu-->
+                    <!--================================-->
+                    <div id="mainnav-menu-wrap">
+                        <div class="nano">
+                            <div class="nano-content">
+                                <ul id="mainnav-menu" class="list-group">
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a  asp-area="" asp-controller="Home" asp-action="Index">
+                                            <i class="fa fa-dashboard"></i>
+                                            <span class="menu-title">
+                                                <strong>Dashboard</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a asp-area="" asp-controller="Home" asp-action="Profile">
+                                            <i class="fa fa-user"></i>
+                                            <span class="menu-title">Profile</span>
+                                        </a>
+                                    </li>
+
+
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a asp-area="" asp-controller="Home" asp-action="Employees">
+                                            <i class="fa fa-users"></i>
+                                            <span class="menu-title">
+                                                <strong>Employees</strong>
+                                            </span>
+                                        </a>
+
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a asp-area="" asp-controller="Home" asp-action="Jobs">
+                                            <i class="fa fa-briefcase"></i>
+                                            <span class="menu-title">Hiring</span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a asp-area="" asp-controller="Home" asp-action="News">
+                                            <i class="fa fa-file"></i>
+                                            <span class="menu-title">News</span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-table"></i>
+                                            <span class="menu-title">Reports</span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-th"></i>
+                                            <span class="menu-title">
+                                                <strong>Files</strong>
+                                            </span>
+                                        </a>
+
+                                    </li>
+
+                                </ul>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--================================-->
+                    <!--End menu-->
+
+                </div>
+            </nav>
+            <!--===================================================-->
+            <!--END MAIN NAVIGATION-->
+            <!--ASIDE-->
+            <!--===================================================-->
+            <aside id="aside-container">
+                <div id="aside">
+                    <div class="nano">
+                        <div class="nano-content">
+
+                            <!--Nav tabs-->
+                            <!--================================-->
+                            <ul class="nav nav-tabs nav-justified">
+                                <li class="active">
+                                    <a href="#demo-asd-tab-1" data-toggle="tab"> <i class="fa fa-comments"></i> </a>
+                                </li>
+                                <li>
+                                    <a href="#demo-asd-tab-3" data-toggle="tab"> <i class="fa fa-wrench"></i> </a>
+                                </li>
+                            </ul>
+                            <!--================================-->
+                            <!--End nav tabs-->
+                            <!-- Tabs Content Start-->
+                            <!--================================-->
+                            <div class="tab-content">
+
+                                <!--First tab (Contact list)-->
+                                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                <div class="tab-pane fade in active" id="demo-asd-tab-1">
+                                    <h4 class="pad-hor text-thin"> Online Members (7) </h4>
+                                    <div class="list-group bg-trans">
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av1.png" alt="" class="img-sm">
+                                                <i class="on bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block">
+                                                <div class="text-small">John Knight</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av2.png" alt="" class="img-sm">
+                                                <i class="on bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block pad-ver-5">
+                                                <div class="text-small">Jose Knight</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av3.png" alt="" class="img-sm">
+                                                <i class="on bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block">
+                                                <div class="text-small">Roy Banks</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av7.png" alt="" class="img-sm">
+                                                <i class="on bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block">
+                                                <div class="text-small">Steven Jordan</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av4.png" alt="" class="img-sm">
+                                                <i class="on bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block">
+                                                <div class="text-small">Scott Owens</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av5.png" alt="" class="img-sm">
+                                                <i class="on bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block">
+                                                <div class="text-small">Melissa Hunt</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h4 class="pad-hor text-thin"> Busy Members (4) </h4>
+                                    <div class="list-group bg-trans">
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av1.png" alt="" class="img-sm">
+                                                <i class="busy bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block">
+                                                <div class="text-small">John Knight</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av2.png" alt="" class="img-sm">
+                                                <i class="busy bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block">
+                                                <div class="text-small">Jose Knight</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av3.png" alt="" class="img-sm">
+                                                <i class="busy bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block">
+                                                <div class="text-small">Roy Banks</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av7.png" alt="" class="img-sm">
+                                                <i class="busy bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block">
+                                                <div class="text-small">Steven Jordan</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h4 class="pad-hor text-thin"> Offline Members (4) </h4>
+                                    <div class="list-group bg-trans">
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av1.png" alt="" class="img-sm">
+                                                <i class="off bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block pad-ver-5">
+                                                <div class="text-small">John Knight</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av2.png" alt="" class="img-sm">
+                                                <i class="off bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block pad-ver-5">
+                                                <div class="text-small">Jose Knight</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av3.png" alt="" class="img-sm">
+                                                <i class="off bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block pad-ver-5">
+                                                <div class="text-small">Roy Banks</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="javascript:void(0)" class="pull-left avatar mar-rgt">
+                                                <img src="img/av7.png" alt="" class="img-sm">
+                                                <i class="off bottom text-light"></i>
+                                            </a>
+                                            <div class="inline-block">
+                                                <div class="text-small">Steven Jordan</div>
+                                                <small class="text-mute">Available</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                <!--End first tab (Contact list)-->
+                                <!--Second tab (Settings)-->
+                                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                <div class="tab-pane fade" id="demo-asd-tab-3">
+                                    <ul class="list-group bg-trans">
+                                        <li class="list-header">
+                                            <h4 class="text-thin">Account Settings</h4>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="pull-right">
+                                                <input class="demo-switch" type="checkbox" checked>
+                                            </div>
+                                            <p>Show my personal status</p>
+                                            <small class="text-muted">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</small>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="pull-right">
+                                                <input class="demo-switch" type="checkbox" checked>
+                                            </div>
+                                            <p>Show offline contact</p>
+                                            <small class="text-muted">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</small>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="pull-right">
+                                                <input class="demo-switch" type="checkbox">
+                                            </div>
+                                            <p>Invisible mode </p>
+                                            <small class="text-muted">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</small>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <ul class="list-group bg-trans">
+                                        <li class="list-header">
+                                            <h4 class="text-thin">Public Settings</h4>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="pull-right">
+                                                <input class="demo-switch" type="checkbox" checked>
+                                            </div> Online status
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="pull-right">
+                                                <input class="demo-switch" type="checkbox">
+                                            </div>
+                                            Show offline contact
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="pull-right">
+                                                <input class="demo-switch" type="checkbox" checked>
+                                            </div>
+                                            Show my device icon
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <h4 class="pad-hor text-thin">Task Progress</h4>
+                                    <div class="pad-all">
+                                        <p>Upgrade Progress</p>
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar progress-bar-success" style="width: 15%;"><span class="sr-only">15%</span></div>
+                                        </div>
+                                        <small class="text-muted">15% Completed</small>
+                                    </div>
+                                    <div class="pad-hor">
+                                        <p>Database</p>
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar progress-bar-danger" style="width: 75%;"><span class="sr-only">75%</span></div>
+                                        </div>
+                                        <small class="text-muted">17/23 Database</small>
+                                    </div>
+                                </div>
+                                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                <!--Second tab (Settings)-->
+
+                            </div>
+                            <!-- Tabs Content End -->
+                            <!--================================-->
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!--===================================================-->
+            <!--END ASIDE-->
+
+        </div>
+
+        <!-- FOOTER -->
+        <!--===================================================-->
+        <footer id="footer">
+
+            <!-- Visible when footer positions are fixed -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="show-fixed pull-right">
+                <ul class="footer-list list-inline">
+                    <li>
+                        <p class="text-sm">SEO Proggres</p>
+                        <div class="progress progress-sm progress-light-base">
+                            <div style="width: 80%" class="progress-bar progress-bar-danger"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="text-sm">Online Tutorial</p>
+                        <div class="progress progress-sm progress-light-base">
+                            <div style="width: 80%" class="progress-bar progress-bar-primary"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="btn btn-sm btn-dark btn-active-success">
+                            Checkout
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Visible when footer positions are static -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!--<div class="hide-fixed pull-right pad-rgt">Currently v2.2</div>-->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class name "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <p class="pad-lft">&#0169; 2019 Registrar Generals Department</p>
+        </footer>
+        <!--===================================================-->
+        <!-- END FOOTER -->
+        <!-- SCROLL TOP BUTTON -->
+        <!--===================================================-->
+        <button id="scroll-top" class="btn">
+            <i class="fa fa-chevron-up"></i>
+        </button>
+        <!--===================================================-->
+
+    </div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+    <!--jQuery [ REQUIRED ]-->
+    <script src="~/js/jquery-2.1.1.min.js" asp-append-version="true"></script>
+
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="~/js/bootstrap.min.js" asp-append-version="true"></script>
+
+    <!--Fast Click [ OPTIONAL ]-->
+    <script src="~/plugins/fast-click/fastclick.min.js" asp-append-version="true"></script>
+
+    <!--Jasmine Admin [ RECOMMENDED ]-->
+    @*<script src="js/helper.js" asp-append-version="true"></script>*@
+
+    <script src="~/js/scripts.js" asp-append-version="true"></script>
+
+    <!--Switchery [ OPTIONAL ]-->
+    <script src="~/plugins/switchery/switchery.min.js" asp-append-version="true"></script>
+
+    <!--Switchery [ OPTIONAL ]-->
+    <script src="~/plugins/jquery-count-to/jquery.count-to.js" asp-append-version="true"></script>
+
+    <!--Easy Pie Chart [ OPTIONAL ]-->
+    <script src="~/plugins/easy-pie-chart/jquery.easypiechart.min.js" asp-append-version="true"></script>
+
+    <!--Flot Chart [ OPTIONAL ]-->
+    <script src="~/plugins/flot-charts/jquery.flot.min.js" asp-append-version="true"></script>
+    <script src="~/plugins/flot-charts/jquery.flot.resize.min.js" asp-append-version="true"></script>
+
+    <!--Flot Order Bars Chart [ OPTIONAL ]-->
+    <script src="~/plugins/flot-charts/jquery.flot.orderBars.js" asp-append-version="true"></script>
+    <script src="~/plugins/flot-charts/jquery.flot.spline.js" asp-append-version="true"></script>
+    <script src="~/plugins/flot-charts/jquery.flot.time.js" asp-append-version="true"></script>
+    <script src="~/plugins/moment/moment.min.js" asp-append-version="true"></script>
+    <script src="~/plugins/moment-range/moment-range.js" asp-append-version="true"></script>
+    <script src="~/plugins/flot-charts/jquery.flot.tooltip.min.js" asp-append-version="true"></script>
+
+    <!--Morris.js [ OPTIONAL ]-->
+    <!--<script src="plugins/jquery-ricksaw-chart/js/raphael-min.js" asp-append-version="true"></script>
+    <script src="plugins/jquery-ricksaw-chart/js/d3.v2.js" asp-append-version="true"></script>
+    <script src="plugins/jquery-ricksaw-chart/js/rickshaw.min.js" asp-append-version="true"></script>-->
+    <!--jvectormap [ OPTIONAL ]-->
+    <script src="~/plugins/jvectormap/jquery-jvectormap.min.js" asp-append-version="true"></script>
+    <script src="~/plugins/jvectormap/jquery-jvectormap-us-aea-en.js" asp-append-version="true"></script>
+    <script src="~/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" asp-append-version="true"></script>
+
+    <!--Bootstrap Select [ OPTIONAL ]-->
+    <script src="~/plugins/bootstrap-select/bootstrap-select.min.js" asp-append-version="true"></script>
+
+    <!--Bootstrap Datepicker [ OPTIONAL ]-->
+    <script src="~/plugins/bootstrap-datepicker/bootstrap-datepicker.js" asp-append-version="true"></script>
+
+    <!--DataTables [ OPTIONAL ]-->
+    <script src="~/plugins/datatables/media/js/jquery.dataTables.js" asp-append-version="true"></script>
+    <script src="~/plugins/datatables/media/js/dataTables.bootstrap.js" asp-append-version="true"></script>
+    <script src="~/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js" asp-append-version="true"></script>
+
+    <!--Skycons [ OPTIONAL ]-->
+    <script src="~/plugins/skycons/skycons.min.js" asp-append-version="true"></script>
+
+    <!--Demo script [ DEMONSTRATION ]-->
+    <script src="~/js/demo/jasmine.js" asp-append-version="true"></script>
+    <script src="~/js/helper.js"></script>
+
+    <!--Demo script [ DEMONSTRATION ]-->
+    <!-- <script src="js/demo/homepage-2.js" asp-append-version="true"></script>-->
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
